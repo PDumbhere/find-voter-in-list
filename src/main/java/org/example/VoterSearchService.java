@@ -90,7 +90,15 @@ public class VoterSearchService {
 
     // Example usage
     public static void main(String[] args) {
-        searchVoter(args[0], args[1]);
+        try (java.util.Scanner scanner = new java.util.Scanner(System.in)) {
+            System.out.print("Enter voter name: ");
+            String name = scanner.nextLine();
+            
+            System.out.print("Enter voter ID: ");
+            String voterId = scanner.nextLine();
+            
+            searchVoter(name, voterId);
+        }
     }
 }
 
