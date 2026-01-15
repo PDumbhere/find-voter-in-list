@@ -10,7 +10,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
-public class VoterSearchService {
+public class VoterSearchServiceByName {
 
     private static final String BASE_URL =
             "https://voter.nagpurnmc.in/api/api/search";
