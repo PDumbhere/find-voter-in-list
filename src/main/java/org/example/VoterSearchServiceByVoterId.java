@@ -58,20 +58,25 @@ public class VoterSearchServiceByVoterId {
                     for (JsonNode voter : results) {
 
                         String resultVoterId = voter.path("voter_id").asText();
+                        String marathiName = voter.path("name").asText();
                         String resultName = voter.path("name_english").asText();
                         String gender = voter.path("gender").asText();
                         String age = voter.path("age").asText();
-                        String booth = voter.path("booth_name").asText();
+                        String booth = voter.path("matadan_kendra").asText();
                         String prabhagNo = voter.path("prabhag_kramank").asText();
+                        String srNo = voter.path("serial_number").asText();
 
                         // Print each result
                         System.out.println("-------------------------------");
                         System.out.println("Prabhag No : " + prabhagNo);
+                        System.out.println("Name      : " + marathiName);
                         System.out.println("Name      : " + resultName);
                         System.out.println("Voter ID  : " + resultVoterId);
                         System.out.println("Gender    : " + gender);
                         System.out.println("Age       : " + age);
                         System.out.println("Booth     : " + booth);
+                        System.out.println("Sr_no     : " + srNo);
+
                     }
                     totalcount++;
                     System.out.println("\n✅ Matching voter_id found in prabhag "+prabhag+".");
